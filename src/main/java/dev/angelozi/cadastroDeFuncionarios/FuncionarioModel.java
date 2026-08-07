@@ -1,10 +1,12 @@
 package dev.angelozi.cadastroDeFuncionarios;
 
+import lombok.AllArgsConstructor;
+import lombok.Data;
 import jakarta.persistence.Entity;
 
 //entity transforme a class into an db entity
 @Entity
-@Table
+@Table(name = "tb_cadastro")
 public class FuncionarioModel {
 
     String nome;
