@@ -1,0 +1,22 @@
+package com.funcionario.Missoes;
+
+import com.funcionario.Funcionarios.FuncionarioModel;
+import jakarta.persistence.*;
+
+import java.util.List;
+
+@Entity
+@Table(name='tb_missoes')
+public class MissoesModel {
+    @Id
+    @GeneratedValue(strategy= GenerationType.AUTO)
+    private Long id;
+
+    private String nome;
+
+    private String dificuldade;
+
+    @OneToMany(mappedBy = "missoed")
+    private List<FuncionarioModel> funcionario;
+
+}

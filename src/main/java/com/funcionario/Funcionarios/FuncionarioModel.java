@@ -1,5 +1,6 @@
-package com.funcionario;
+package com.funcionario.Funcionarios;
 
+import com.funcionario.Missoes.MissoesModel;
 import jakarta.persistence.*;
 
 @Entity
@@ -14,6 +15,9 @@ public class FuncionarioModel {
     private String email;
     private int idade;
 
+    @ManyToOne
+    private MissoesModel missoes;
+
     //constutor
 
     public FuncionarioModel(long id, int idade, String email, String nome) {
@@ -22,6 +26,8 @@ public class FuncionarioModel {
         this.email = email;
         this.nome = nome;
     }
+
+
 
     //getters e setters
     public String getNome() {

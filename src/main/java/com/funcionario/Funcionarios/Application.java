@@ -1,4 +1,4 @@
-package com.funcionario;
+package com.funcionario.Funcionarios;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
