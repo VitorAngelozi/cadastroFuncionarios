@@ -1,13 +1,15 @@
 package com.funcionario;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 
 @Entity
 @Table(name= "tb_cadastro_de_funcionario")
 public class FuncionarioModel {
     //atributos funcionario
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     long id;
+
     private String nome;
     private String email;
     private int idade;
