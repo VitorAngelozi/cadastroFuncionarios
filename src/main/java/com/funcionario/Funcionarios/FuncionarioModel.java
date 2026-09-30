@@ -2,10 +2,17 @@ package com.funcionario.Funcionarios;
 
 import com.funcionario.Missoes.MissoesModel;
 import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
 @Entity
 @Table(name= "tb_cadastro_de_funcionario")
+@AllArgsConstructor
+@NoArgsConstructor
+@Data
 public class FuncionarioModel {
+
     //atributos funcionario
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -16,41 +23,7 @@ public class FuncionarioModel {
     private int idade;
 
     @ManyToOne
+    @JoinColumn(name="missoes_id")
     private MissoesModel missoes;
 
-    //constutor
-
-    public FuncionarioModel(long id, int idade, String email, String nome) {
-        this.id = id;
-        this.idade = idade;
-        this.email = email;
-        this.nome = nome;
-    }
-
-
-
-    //getters e setters
-    public String getNome() {
-        return nome;
-    }
-
-    public void setNome(String nome) {
-        this.nome = nome;
-    }
-
-    public String getEmail() {
-        return email;
-    }
-
-    public void setEmail(String email) {
-        this.email = email;
-    }
-
-    public int getIdade() {
-        return idade;
-    }
-
-    public void setIdade(int idade) {
-        this.idade = idade;
-    }
 }

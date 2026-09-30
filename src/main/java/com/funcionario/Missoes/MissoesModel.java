@@ -6,7 +6,7 @@ import jakarta.persistence.*;
 import java.util.List;
 
 @Entity
-@Table(name='tb_missoes')
+@Table(name="tb_missoes")
 public class MissoesModel {
     @Id
     @GeneratedValue(strategy= GenerationType.AUTO)
@@ -16,7 +16,7 @@ public class MissoesModel {
 
     private String dificuldade;
 
-    @OneToMany(mappedBy = "missoed")
+    @OneToMany(mappedBy = "missoes")
     private List<FuncionarioModel> funcionario;
 
 }
