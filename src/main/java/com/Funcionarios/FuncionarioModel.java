@@ -1,9 +1,8 @@
-package com.funcionario.Funcionarios;
+package com.Funcionarios;
 
-import com.funcionario.Missoes.MissoesModel;
+import com.Missoes.MissoesModel;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
-import lombok.CustomLog;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 

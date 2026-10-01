@@ -1,6 +1,6 @@
-package com.funcionario.Missoes;
+package com.Missoes;
 
-import com.funcionario.Funcionarios.FuncionarioModel;
+import com.Funcionarios.FuncionarioModel;
 import jakarta.persistence.*;
 
 import java.util.List;

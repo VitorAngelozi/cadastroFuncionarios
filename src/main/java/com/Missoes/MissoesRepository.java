@@ -1,4 +1,4 @@
-package com.funcionario.Missoes;
+package com.Missoes;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 
